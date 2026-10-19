@@ -1,5 +1,5 @@
 [package]
-name = "envault"
+name = "envault-cli"
 version = "0.1.0"
 edition = "2021"
 description = "Local-first encrypted secrets manager for Rust projects"
