@@ -271,7 +271,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "envault"
+name = "envault-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
