@@ -1,6 +1,6 @@
 [package]
 name = "envault-cli"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Local-first encrypted secrets manager for Rust projects"
 license = "MIT"
@@ -9,6 +9,10 @@ homepage = "https://github.com/KhadkaRipesh/envault"
 keywords = ["secrets", "env", "encryption", "dotenv", "security"]
 categories = ["command-line-utilities", "cryptography"]
 readme = "README.md"
+
+[[bin]]
+name = "envault"
+path = "src/main.rs"
 
 [dependencies]
 # CLI

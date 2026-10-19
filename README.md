@@ -34,9 +34,27 @@ never readable by AI coding agents that share your dev environment.
 
 ## Installation
 
+### From crates.io
+
 ```sh
+cargo install envault-cli
+```
+
+The installed binary is called `envault`, so you run:
+
+```sh
+envault init
+envault set dev DATABASE_URL
+envault run --profile dev -- ./myapp
+```
+
+### From source (local build)
+
+```sh
+git clone https://github.com/yourusername/envault.git
+cd envault
 cargo build --release
-# target/release/envault is a single static binary; copy it onto your PATH.
+cp target/release/envault /usr/local/bin/  # or your preferred PATH location
 ```
 
 ## Quick start: init → set → run
