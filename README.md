@@ -53,11 +53,11 @@ Initialized envault:
 #    [profiles.dev]
 #    keys = ["DATABASE_URL", "API_KEY"]
 
-# 3. Encrypt a secret into the store (value prompted, never echoed).
-$ envault set dev DATABASE_URL
+# 3. Import secrets from a .env file (adds keys to envault.toml too).
+$ envault import .env --profile dev
 Enter master password:
-Enter value for DATABASE_URL:
-Set dev/DATABASE_URL
+Imported 2 entries into 'dev'; deleted .env.
+Import complete for profile 'dev'.
 
 # 4. List key names only — values are never revealed.
 $ envault list dev
@@ -86,7 +86,3 @@ $ envault run --profile dev -- ./bin/myapp
 - `crypto.rs` — Argon2id KDF, XChaCha20-Poly1305 encrypt/decrypt, value encoding.
 - `store.rs` — read/write `secrets.enc` and `envault.toml`, atomic writes, `.gitignore` handling, AAD construction.
 - `commands/` — one module per command (`init`, `set`, `list`, `run`, `import`).
-
-## License
-
-MIT
