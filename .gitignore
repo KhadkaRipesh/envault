@@ -1,0 +1,16 @@
+# Build artifacts
+/target/
+
+# Envault encrypted store (gitignored by design)
+.envault/secrets.enc
+.envault/secrets.enc.tmp
+
+# Local .env files (delete after import)
+.env
+
+# Editors / OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
